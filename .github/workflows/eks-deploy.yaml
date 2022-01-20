@@ -34,4 +34,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: list s3 buckets
         run: aws s3 ls
-
+      - name: terraform init
+        run: terraform init
+      - name: terraform plan
+        run: terraform plan
+      - name: terraform apply
+        run: terraform apply -auto-approve
